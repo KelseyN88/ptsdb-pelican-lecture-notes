@@ -21,9 +21,11 @@ for (let i = 1; i < 6; i++) {
     const colClass = divClasses.find(c => c.startsWith('c'))
     const j = colClass[1]
     // console.log(j)
-  }
+
     // cells[i - 1][j.toString() + '00'] = div
   }
+  }
+
     let p1Score = 0
     let p2Score = 0
     
@@ -41,10 +43,10 @@ for (let i = 1; i < 6; i++) {
     // display modal
     // get user answer when click button
 
-    
+      
     })
-  
-  
+
+
     // THIS SECTION IS FOR qs_organized IMPORT
 //     div.addEventListener('click', () => {
 //       // todo: add comment
