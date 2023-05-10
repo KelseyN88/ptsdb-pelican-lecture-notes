@@ -28,20 +28,22 @@ const lightStates = {
   yield: ['red']
 }
 
-// let currentLightState = 'red'
+let currentLightState = 'red'
 
 
-// function transition (newState) {
-//   const validNexts = lightStates[currentLightState]
+function transition (newState) {
+  const validNexts = lightStates[currentLightState]
 
-//   // first, check for invalid transition
-//   if (!validNexts.includes(newState)) {
-//     console.log('Invalid transition, try again.')
-//   } else {
-//     console.log(`Moving to ${newState} state.`)
-//     currentLightState = newState
-//   }
-// }
+  // first, check for invalid transition
+  if (!validNexts.includes(newState)) {
+    console.log('Invalid transition, try again.')
+  } else {
+    console.log(`Moving to ${newState} state.`)
+    currentLightState = newState
+  }
+}
+
+transition('green')
 
 
 // console.log(currentLightState)
@@ -81,20 +83,20 @@ class StateMachine {
   }
 }
 
-const stoplight = new StateMachine(
-  lightStates, 'red'
-)
+// const stoplight = new StateMachine(
+//   lightStates, 'red'
+// )
 
 
-const vendingMachineDef = {
-  waiting: ['coin-inserted'],
-  'coin-inserted': ['waiting', 'selected'],
-  selected: ['waiting', 'vending'],
-  vending: ['waiting']
-}
+// const vendingMachineDef = {
+//   waiting: ['coin-inserted'],
+//   'coin-inserted': ['waiting', 'selected'],
+//   selected: ['waiting', 'vending'],
+//   vending: ['waiting']
+// }
 
-const vendingMachine = new StateMachine(
-  vendingMachineDef, 'waiting'
-)
+// const vendingMachine = new StateMachine(
+//   vendingMachineDef, 'waiting'
+// )
 
-module.exports = vendingMachine
+// module.exports = vendingMachine
